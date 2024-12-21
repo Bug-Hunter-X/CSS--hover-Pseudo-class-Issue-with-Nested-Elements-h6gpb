@@ -1,0 +1,21 @@
+The following CSS code snippet demonstrates an issue where the expected behavior of the `:hover` pseudo-class is not working as intended.  The inner `div` element with the class `inner` should change color upon hovering over the outer `div` element, but it does not. 
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+div:hover .inner {
+  background-color: lightcoral; 
+}
+
+.inner {
+  width: 50px;
+  height: 50px;
+  background-color: lightgreen;
+}
+```
+
+The issue is subtle and might not be immediately obvious to developers less familiar with specificity and the cascading nature of CSS.
