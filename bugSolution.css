@@ -1,0 +1,23 @@
+The solution is to either make the `div:hover .inner` selector more specific or to increase the specificity of the inner `div`'s style. 
+
+Here's a corrected version of the CSS:
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+div:hover > .inner {
+  background-color: lightcoral; 
+}
+
+.inner {
+  width: 50px;
+  height: 50px;
+  background-color: lightgreen;
+}
+```
+
+By adding the `>` child selector, we explicitly target only direct children of the hovered div. This increases specificity and ensures the hover style takes precedence.
